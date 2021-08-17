@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Pixel';
+    src: local('Pixel'), url('../fonte/Pixeled.ttf') ;
+}
+
+@font-face {
+    font-family: 'Press' ;
+    src: url('../fonte/PressStart2P-vaV7.ttf');
+}
+
+body{
+    font-family:'Press';
+    background: black;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+header img{
+    width: 10%;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title h1{
+    font-family: 'Pixel';
+    font-size: 35px;
+    margin: 0;
+}
+.sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sobre h3{
+    font-size: 15px;
+    width: 80%;
+    text-align: center;
+    line-height: 2em;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px
+}
+.personagem{
+    background: #f6f6f6;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 20%;
+    line-height: 2em;
+}
+.imagens{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.imagens img{
+    width: 45%;
+}
+#link{
+    width: 40%;
+}
+#marle{
+    width: 30%;
+}
+#chrono{
+    width: 35%;
+}
+#mario{
+    width: 85%;
+}
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#play {
+    padding: 15px 10px;
+    background: #815ac0;
+    color: white;
+    font-family:'Press';
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#play:hover {
+    background: #b185db;
+}
+#play:active{
+    box-shadow: inset 0 0 5px black;
+    font-size: 17.5px;
+}
+.texto input:focus{
+    outline: 0;
+}
+footer{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}

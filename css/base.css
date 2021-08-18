@@ -108,13 +108,61 @@ header img{
     outline: 0;
 }
 footer{
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0px;
+    bottom: 0;
+    position: fixed;
+    width: 90%;
+    text-align: center;
     font-size: 10px;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
+    padding: 5px;
+}
+
+@media (max-width: 700px){
+
+header{
+    justify-content: flex-start;
+}
+header img {
+    width: 25%;
+}
+.title h1{
+    font-size: 15px;
+    text-align: center;
+}
+.title img{
+    width:15%;
+}
+.sobre h3{
+    font-size: 10px;
+}
+.container{
+    flex-direction: column;
+    align-items: center
+}
+.personagem{
+    width: 50%;
+    font-size: 8px;
+    line-height: none;
+}
+.personagem h3{
+    margin:0px;
+}
+.imagens{
+    width: 90%;
+}
+.button{
+    margin-top: 0px
+}
+#play {
+    font-size: 10px;
+}
+play:active{
+    box-shadow: none;
+    font-size: none;
+}
+footer{
+    position: relative;
+    margin: 20px 0px 0px 13px;
+    font-size: 8px;
+    line-height:1.5em;
+}
 }

@@ -1,0 +1,47 @@
+.orientacao{
+    display: flex;
+    flex-direction: column;
+}
+.informacao{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#paragrafo{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5em;
+    padding:30px;
+    width:60%;
+    text-align: center;
+}
+#imagem{
+    width: 40%;
+    max-width: 650px;
+    display: block;
+    margin-right: 10px;
+}
+.button{
+    width: 60%;
+    margin-top: 0px;
+}
+
+@media (max-width:700px) {
+
+    .informacao{
+        flex-direction: column;
+    }
+    #paragrafo{
+        font-size: 12px;
+        width: 90%;
+        padding: 0px;
+    }
+    #imagem{
+        width: 90%;
+    }
+    .button{
+        width:100%;
+        margin-top: 5px;
+    }
+}

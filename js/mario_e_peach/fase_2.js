@@ -4,15 +4,26 @@ var button = document.getElementById('play')
 button.focus()
 
 function iniciarFase(){
-    let result = prompt('Você têm duas escolhas:\n1. Continuar os enfrentando\n2. Tentar fugir e desvia-los fora das grades')
+    let textoUsuario  = 'Você têm duas escolhas:\n1. Continuar os enfrentando\n2. Tentar fugir e desvia-los fora das grades'
+    let result = inserirDado(textoUsuario)
+
+    while(!['1','2'].includes(result) && result !== null){
+        alert('Insira uma opção válida')
+        result =  inserirDado(textoUsuario)
+    }
+
     if(result === '1'){
-        texto.innerHTML = 'Vocêconseguiu vence-los'
+        texto.innerHTML = 'Você conseguiu vence-los'
         img.src = '../../img/mario_e_peach/fase_2/escolha_1.gif'
         button.onclick = redirecionar
-    }else {
+    }else if(result === '2'){
         texto.innerHTML = 'GAME OVER - Você caiu em umpoço de lava que fica abaix das grades'
         img.src = '../../img/mario_e_peach/fase_2/escolha_2.gif'
         button.onclick = redirecionarInicio
+    }
+
+function inserirDado(textoUsuario){
+        return prompt(textoUsuario)
     }
 
 function redirecionarInicio(){

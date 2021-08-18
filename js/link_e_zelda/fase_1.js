@@ -24,19 +24,21 @@ function iniciarFase(){
     }
 }
 
-function inserirDado(textoUsuario){
-    return prompt(textoUsuario)
-}
-
 function seguirEmFrente(){
-    let result = prompt('O que você gostaria de fazer agora?\n1. Tentar entrar no castelo novamente\n2. Ir para a floresta em busca da Master Sword')
+    let textoUsuario = 'O que você gostaria de fazer agora?\n1. Tentar entrar no castelo novamente\n2. Ir para a floresta em busca da Master Sword'
+    let result = inserirDado(textoUsuario)
+
+    while(!['1','2'].includes(result) && result !== null){
+        alert('Insira uma opção válida')
+        result =  inserirDado(textoUsuario)
+    }
 
     if(result === '1'){
         texto.innerHTML = 'GAME OVER<br>Você foi capturado'
         img.src = '../../img/link_e_zelda/fase_1/game_over.gif'
         button.value = 'Recomeçar'
         button.onclick = gameOver
-    }else {
+    }else if(result === '2'){
         texto.innerHTML = 'Você encontrou a Master Sword agora siga para o castelo Hyrule'
         img.src = '../../img/link_e_zelda/fase_1/escolha_2.gif'
         button.onclick = entrarNoCastelo
@@ -48,7 +50,10 @@ function entrarNoCastelo(){
     img.src = '../../img/link_e_zelda/fase_1/entrada_castelo.gif'
     button.onclick = redirecionar
     button.value = 'Fase 2'
+}
 
+function inserirDado(textoUsuario){
+    return prompt(textoUsuario)
 }
 
 function redirecionar(){

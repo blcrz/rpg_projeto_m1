@@ -1,6 +1,12 @@
 function comecarJogo(){
 
-    let result = prompt('Escolha a história que quer jogar:\n1. Zelda e Link.\n2. Chrono e Marle.\n3. Mario e Peach')
+    let textoUsuario = 'Escolha a história que quer jogar:\n1. Zelda e Link.\n2. Chrono e Marle.\n3. Mario e Peach'
+    let result = inserirDado(textoUsuario)
+
+    while(!['1','2','3'].includes(result) && result !== null){
+        alert('Insira uma opção válida')
+        result =  inserirDado(textoUsuario)
+    }
 
     if(result === '1'){
         location.href = './html/link_e_zelda/fase_1.html'
@@ -9,4 +15,8 @@ function comecarJogo(){
     }else if(result === '3'){
         location.href = './html/mario_e_peach/fase_1.html'
 }
+}
+
+function inserirDado(textoUsuario){
+    return prompt(textoUsuario)
 }

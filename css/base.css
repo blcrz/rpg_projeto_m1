@@ -96,6 +96,7 @@ header img{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    outline: 0px;
 }
 #play:hover {
     background: #b185db;
@@ -105,7 +106,7 @@ header img{
     font-size: 17.5px;
 }
 .informacao input:focus{
-    outline: 0;
+    outline: 0px;
 }
 footer{
     bottom: 0;

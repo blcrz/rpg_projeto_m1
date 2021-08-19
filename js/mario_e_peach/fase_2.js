@@ -17,16 +17,16 @@ function iniciarFase(){
         img.src = '../../img/mario_e_peach/fase_2/escolha_1.gif'
         button.onclick = redirecionar
     }else if(result === '2'){
-        texto.innerHTML = 'GAME OVER - Você caiu em umpoço de lava que fica abaix das grades'
+        texto.innerHTML = 'GAME OVER - Você caiu em umpoço de lava que fica abaixo das grades'
         img.src = '../../img/mario_e_peach/fase_2/escolha_2.gif'
-        button.onclick = redirecionarInicio
+        button.onclick = gameOver
     }
 
 function inserirDado(textoUsuario){
         return prompt(textoUsuario)
     }
 
-function redirecionarInicio(){
+function gameOver(){
         button.onclick = location.href = '../../index.html'
 }
 

@@ -15,7 +15,7 @@ function iniciarFase(){
     if(result === '1'){
         texto.innerHTML = 'GAME OVER - Você foi esmagado mesmo  tendo cautela, pois os obstáculos foram muito rápidos'
         img.src = '../../img/mario_e_peach/fase_3/escolha_1.gif'
-        button.onclick = redirecionarInicio
+        button.onclick = gameOver
     }else if(result === '2'){
         texto.innerHTML = 'Você conseguiu passar pelos obstáculos com agilidade e desvia-los com sucesso!'
         img.src = '../../img/mario_e_peach/fase_3/escolha_2.gif'
@@ -26,7 +26,7 @@ function inserirDado(textoUsuario){
         return prompt(textoUsuario)
     }
 
-function redirecionarInicio(){
+function gameOver(){
         button.onclick = location.href = '../../index.html'
 }
 
